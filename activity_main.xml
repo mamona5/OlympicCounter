@@ -1,0 +1,385 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:padding="@dimen/paddingNormal"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/paddingExtraLarge"
+                android:paddingStart="@dimen/paddingLarge">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:padding="@dimen/paddingNormal"
+                    android:src="@drawable/canadaflag" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/paddingSmall">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/canada_gold"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/my_button"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:onClick="canadaLostGold"
+                        android:text="@string/minus"
+                        android:textSize="@dimen/textButton" />
+
+                    <ImageView
+                        android:id="@+id/canada_gold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/gold" />
+
+                    <TextView
+                        android:id="@+id/canada_gold_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/canada_gold"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/textNormal" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/canada_gold"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/my_button"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:onClick="canadaScoredGold"
+                        android:text="@string/plus"
+                        android:textSize="@dimen/textButton" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/paddingSmall">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/canada_silver"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/my_button"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:onClick="canadaLostSilver"
+                        android:text="@string/minus"
+                        android:textSize="@dimen/textButton" />
+
+                    <ImageView
+                        android:id="@+id/canada_silver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/silver" />
+
+                    <TextView
+                        android:id="@+id/canada_silver_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/canada_silver"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/textNormal" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/canada_silver"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/my_button"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:onClick="canadaScoredSilver"
+                        android:text="@string/plus"
+                        android:textSize="@dimen/textButton" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/paddingSmall">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/canada_bronze"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/my_button"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:onClick="canadaLostBronze"
+                        android:text="@string/minus"
+                        android:textSize="@dimen/textButton" />
+
+                    <ImageView
+                        android:id="@+id/canada_bronze"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/bronze" />
+
+                    <TextView
+                        android:id="@+id/canada_bronze_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/canada_bronze"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/textNormal" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/canada_bronze"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/my_button"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:onClick="canadaScoredBronze"
+                        android:text="@string/plus"
+                        android:textSize="@dimen/textButton" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/total_canada_medal_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/textNormal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="match_parent" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/paddingExtraLarge"
+                android:paddingRight="@dimen/paddingLarge">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:padding="@dimen/paddingNormal"
+                    android:src="@drawable/usaflag" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/paddingSmall">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/usa_gold"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/my_button"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:onClick="usaLostGold"
+                        android:text="@string/minus"
+                        android:textSize="@dimen/textButton" />
+
+                    <ImageView
+                        android:id="@+id/usa_gold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/gold" />
+
+                    <TextView
+                        android:id="@+id/usa_gold_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/usa_gold"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/textNormal" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/usa_gold"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/my_button"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:onClick="usaScoredGold"
+                        android:text="@string/plus"
+                        android:textSize="@dimen/textButton" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/paddingSmall">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/usa_silver"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/my_button"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:onClick="usaLostSilver"
+                        android:text="@string/minus"
+                        android:textSize="@dimen/textButton" />
+
+                    <ImageView
+                        android:id="@+id/usa_silver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/silver" />
+
+                    <TextView
+                        android:id="@+id/usa_silver_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/usa_silver"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/textNormal" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/usa_silver"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/my_button"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:onClick="usaScoredSilver"
+                        android:text="@string/plus"
+                        android:textSize="@dimen/textButton" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/paddingSmall">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/usa_bronze"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/my_button"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:onClick="usaLostBronze"
+                        android:text="@string/minus"
+                        android:textSize="@dimen/textButton" />
+
+                    <ImageView
+                        android:id="@+id/usa_bronze"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/bronze" />
+
+                    <TextView
+                        android:id="@+id/usa_bronze_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/usa_bronze"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/textNormal" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/usa_bronze"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/my_button"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:onClick="usaScoredBronze"
+                        android:text="@string/plus"
+                        android:textSize="@dimen/textButton" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/total_usa_medal_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/textNormal" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
